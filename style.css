@@ -1,0 +1,576 @@
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+    
+
+    /*========== Colors ==========*/
+    --first-color:  #ef2d69;
+    --first-color-alt:#fa0463;
+
+    --title-color: hsl(250, 8%, 15%);
+    --text-color: hsl(250, 8%, 35%);
+    --body-color: hsl(250, 60%, 98%);
+    --container-color: #fff;
+    --shadow: hsla(0, 0%, 15%, .1);
+  
+    
+
+    /*========== Font and typography ==========*/
+  
+
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+}
+
+/*=============== BASE ===============*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body,
+button,
+input {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+}
+
+body {
+    background-color: var(--body-color);
+    color: var(--text-color);
+}
+
+h1, h2, h3, h4 {
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    
+}
+
+button {
+    cursor: pointer;
+}
+
+
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.section {
+    padding: 7rem 0 2rem;
+}
+
+.section__title,
+.breadcrumb__title {
+    font-size: var(--h1-font-size);
+}
+
+.section__title,
+.breadcrumb__subtitle {
+    margin-bottom: var(--mb-3);
+}
+
+.section__title,
+.breadcrumb__title,
+.breadcrumb__subtitle {
+    text-align: center;
+}
+
+/*=============== LAYOUT ===============*/
+.container {
+    max-width: 968px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.grid {
+    display: grid;
+}
+/* Estilos para COOKIES y politica de privacidad  *****************************************************/
+/******************************************************************************************************/
+#cookiesweb {
+    position: fixed;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: block;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    /*  flex-wrap: wrap; */
+    width: 100%;
+    height: auto;
+    background-color: rgba(77, 75, 75, 0.9);
+    top: 75vh;
+    border-radius: 10px;
+    padding: 2vh 0vh;
+    z-index: 10;
+  }
+  
+  #cookiesweb p {
+    color: white;
+    text-align: center;
+    font-size: 1.3vw;
+  }
+  
+  #cookiesweb p u {
+    color: white;
+    text-decoration: underline;
+  }
+  
+  #cookiesweb p u:hover {
+    color: red;
+    text-decoration: underline;
+  }
+  
+  #cookiesweb h2 {
+    color: white;
+    text-align: center;
+    letter-spacing: 0.4vw;
+  }
+  
+  #cookiesweb div {
+    margin: 1vw 6vw;
+  }
+  
+  #cookiesweb div:nth-child(2) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  
+  #cookiesweb button {
+    width: 9vw;
+    height: 3.5vw;
+    border-radius: 4px;
+    outline-style: none;
+    font-size: 1.3vw;
+    background-color: #F9B53C;
+    margin-top: 2vh;
+    margin-right: 4vw;
+    -webkit-box-shadow: 2px 2px white;
+            box-shadow: 2px 2px white;
+    border: none;
+    padding: 0vw 0vw;
+  }
+  
+  #cookiesweb button:active {
+    color: #ec0b0bf3;
+    font-weight: bold;
+    -webkit-box-shadow: 3px 3px white inset;
+            box-shadow: 3px 3px white inset;
+  }
+  
+
+  
+  /******************************************************************************************************/
+  /* FIN para cookies y politica de privacidad  *********************************************************/
+/*=============== HEADER SECTION ===============*/
+
+.header{
+    width: 100%;
+    background: transparent;
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+}
+
+/*=============== NAV ===============*/
+.nav{
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 3rem;
+}
+
+.login__toggle,
+.nav__logo,
+.nav__toggle,
+.nav__shop{
+    color: var(--title-color);
+}
+
+.nav__logo{
+    text-transform: capitalize;
+    font-weight: var(--font-bold);
+    letter-spacing: 1px;
+    display: inline-flex;
+    align-items: center;
+    column-gap: 0.25rem;
+}
+
+.nav__logo-icon{
+    font-size: 1.25rem;
+}
+
+.nav__btns{
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+    margin-left: auto;
+    
+}
+
+.nav__toggle,
+.login__toggle,
+.nav__shop{
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+.nav__list{
+    display: flex;
+    align-items: center;
+    column-gap: 2rem;
+}
+
+.nav__link{
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+    font-size: var(--normal-font-size);
+    transition: 0.3s;
+}
+
+.nav__link:hover{
+    color: var(--first-color);
+}
+
+.nav__toggle{
+    display: none;
+}
+
+.nav__btns button{
+    background: var(--first-color);
+    color: #fff;
+    padding: 1rem 1.75rem;
+    border-radius: .5rem;
+    font-weight: var(--font-medium);
+    transition: .3s;
+}
+
+
+
+/*=============== Header ===============*/
+
+.logo{
+    margin-top: 30px;
+}
+
+.logo img{
+    width: 60%;
+    height: 60%;
+}
+
+#tophead{
+    background-color: #ef2d69;
+}
+
+.topheader{
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+}
+
+.contacto ul li, .socials ul li{
+    display: inline;
+    margin: 0 5px;
+        
+}
+
+.topheader, .topheader a{
+    color: #fff;
+}
+
+.contacto ul li a:hover {
+    text-decoration: underline;
+}
+
+/*=============== MAIN ===============*/
+
+.main{
+    margin-top: 50px;
+}
+
+/*=============== BUTTONS ===============*/
+
+
+
+.button:hover{
+    transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.button{
+    margin-top: 30px;
+    display: inline-block;
+    background: var(--first-color);
+    color: #fff;
+    padding: 1rem 1.75rem;
+    border-radius: .5rem;
+    font-weight: var(--font-medium);
+    transition: .3s;
+    border: 1px solid black;
+    -webkit-box-shadow: 2px 2px 2px black;
+    box-shadow: 2px 2px 2px black;
+    font-size: 20px;
+}
+
+.button:hover{
+    background: var(--first-color-alt);
+}
+
+.button__icon{
+    font-size: 1.25rem;
+
+}
+
+.button--link{
+    color: var(--title-color);
+}
+
+
+.button--flex{
+    display: inline-flex;
+    align-items: center;
+    column-gap: .5rem;
+}
+
+/* ZONA PRIVADA */
+#zonaprivada {
+    position: absolute;
+    background-color: var(--first-color);
+    width: 16vw;
+    height: auto;
+    top: 20vh;
+    left: 66vw;
+    z-index: 10;
+    padding: 0.8%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 2px solid black;
+    -webkit-box-shadow: 2px 2px 2px #473f3f;
+    box-shadow: 2px 2px 2px #473f3f;
+    border-radius: 5px;
+    visibility: hidden;
+    color: #fff;
+}
+
+
+
+.btn{
+    margin-top: 20px;
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.btn-primary{
+    color: #fff;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+.btn-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.form-control{
+    margin: 5px 0;
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+
+}
+
+
+
+
+
+@media (max-width:768px){
+
+    #menu-btn{
+       display: inline-block;
+    }
+ 
+    
+}
+
+@media only screen and (orientation: portrait) and (max-width: 770px){
+#zonaprivada {
+    position: absolute;
+    background-color: var(--first-color);
+    width: 94vw;
+    height: auto;
+    top: 20vh;
+    left: 3vw;
+    z-index: 10;
+    padding: 0.8%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 2px solid black;
+    -webkit-box-shadow: 2px 2px 2px #473f3f;
+    box-shadow: 2px 2px 2px #473f3f;
+    border-radius: 5px;
+    visibility: hidden;
+    padding-bottom: 2vh;
+}
+
+.nav__list{
+    display: none;
+}
+
+.topheader{
+    display: none;
+}
+
+.logo img{
+    max-width: fit-content;
+    max-height: fit-content;
+}
+
+#cookiesweb {
+    position: fixed;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+    top: 60vh;
+    border-radius: 7px;
+    padding-bottom: 2vh;
+    padding-top: 1vh;
+    z-index: 10;
+  }
+  #cookiesweb p {
+    color: white;
+    text-align: center;
+    font-size: 4vw;
+    margin-bottom: 1vh;
+  }
+  #cookiesweb p u {
+    color: white;
+    text-decoration: underline;
+  }
+  #cookiesweb p u:hover {
+    color: #ff0004;
+    text-decoration: underline;
+  }
+  #cookiesweb h2 {
+    color: white;
+    text-align: center;
+    font-size: 5.5vw;
+    letter-spacing: 0.8vw;
+  }
+  #cookiesweb div {
+    margin: 1vw 4vw;
+    width: 100%;
+  }
+  #cookiesweb div:nth-child(2) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #cookiesweb button {
+    width: auto;
+    height: auto;
+    padding: 1vh 8vw;
+    margin-top: 1vh;
+    border-radius: 1px;
+    outline-style: none;
+    font-size: 5.2vw;
+    background-color: #F9B53C;
+    margin-top: 0vh;
+    -webkit-box-shadow: 2px 2px black;
+            box-shadow: 2px 2px black;
+    border: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #cookiesweb button:active {
+    color: #ec0b0bf3;
+    font-weight: bold;
+    -webkit-box-shadow: 3px 3px black inset;
+            box-shadow: 3px 3px black inset;
+  }
+
+
+
+}

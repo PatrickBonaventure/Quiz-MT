@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accedir</title>
+    <link rel="stylesheet" href="stylesimulador.css">
+    <link rel="stylesheet" href="form.css">
+    <script src="https://kit.fontawesome.com/c7d435accd.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <header>
+        <div id="tophead">
+            <div class="topheader container">
+                <div class="contacto">
+                    <ul>
+                        <li>
+                            <i class="fa fa-phone"></i>&nbsp<a href="tel:977222231">977&nbsp22&nbsp22&nbsp31</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-envelope"></i>&nbsp<a href="mailto:info@multimediatarragona.com">info@multimediatarragona.com</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="socials">
+                    <ul>
+                        <li><a href="https://es.linkedin.com/in/multimedia-tarragona-s-l-a22a59208" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                        <li><a href="https://www.facebook.com/multimedia.tarragona.984/" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                        <li><a href="https://www.instagram.com/multimediatgn/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://twitter.com/Multimediatgn" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#" target="_blank"><div class="accedir">[&nbspAccedir&nbsp]</div></a></li>
+                    </ul>
+                
+                </div>
+                
+            
+            </div>
+        </div>
+        
+        <nav class="nav container">
+            <div id="logotipo"><img src="./img/logoM.png" alt="logo"></div>
+            <div class="nivell"><b>Nivell Actic:&nbsp<span>Mitjà</span></b></div>
+            <div id="perfilusuario">
+                <i class="fa fa-user"><b>&nbspPerfil Usuari&nbsp</b></i>
+            </div>
+            <div id="logout">
+                <a href="#"><b>Sortir</b><i class="fa fa-sign-out"></i></a>
+            </div>
+        </nav>
+
+        
+     
+    </header>
+    <main>
+        
+        <div class="banner">
+            <div class="registro container">
+                <h1>Registro</h1>
+            </div>
+        </div>
+
+       <section class="registration section container">
+        <div class="registration__container">
+            <div class="registration__title">
+                <h2>Create Account</h2>
+            </div>
+            <form id="form" class="form" action="insert.php" method="POST">
+                <!-- <div class="form-control">
+                    <label for="username">Username</label>
+                    <input type="text" placeholder="Neilo" id="username" name="username"/>
+                 
+                </div> -->
+                <div class="form-control">
+                    <label for="username">Email</label>
+                    <input type="email" placeholder="patubt@gmail.com" id="email" name="email" />
+                    
+                </div>
+                <div class="form-control">
+                    <label for="username">Password</label>
+                    <input type="password" placeholder="Password" id="password" name="password"/>
+                    
+                </div>
+                <div class="form-control">
+                    <label for="username">Password check</label>
+                    <input type="password" placeholder="Password two" id="password2" name="password2"/>
+                    
+                </div>
+                <!-- <?php
+    if(isset($_GET['error'])){?>
+<small class="error"><?php echo $_GET['error']?></small>  <?php }?> -->
+                <button type="submit" name="submit" value="submit">Submit</button>
+                <div class="form-control">
+                    <p>Already have an account?<a href="accedir.html">&nbspLogin</a></p>
+                 
+                </div>  
+            </form>
+        </div>
+    </section>
+    <footer>
+
+    </footer> 
+    </main>
+    
+</body>
+</html>
